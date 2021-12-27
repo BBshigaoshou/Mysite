@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天气查询系统</title>
+    <link rel="stylesheet" href="{% static 'css/weather.css' %}">
+</head>
+<body>
+
+<div class="from">
+    <img class="bgc" src="{% static "img/4.png" %}" alt="">
+    <div class="submit" style="height: 250px;">
+        <span class="form_title">城市天气查询</span>
+        <form method='post' enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form_input">
+                <span>天气:</span>
+                <input class="inputs" type="text" name="city" placeholder="如：北京" required="required">
+            </div>
+
+            <div style="text-align: center;
+                color: red;">
+                {{ msg }}
+            </div>
+            <div class="btn_submit">
+                <a>
+                    <button type="submit" class="btn">查询</button>
+                </a>
+            </div>
+        </form>
+        <div class="introduce">
+            <div class="introduce_item">
+            <span class="introduce_item_title">
+                <h2 style="background: rgba(255, 255, 255, 0.2);padding: 0px 50px;">{{ inputmsg }}</h2>
+                {% for weather in weatherlist %}
+                    <p style="background: rgba(255, 255, 255, 0.2);padding: 0px 50px;">{{ weather.cityname }} {{ weather.date }} {{ weather.high }} {{ weather.low }} {{ weather.fl }} {{ weather.fx }} {{ weather.type }}</p>
+                {% endfor %}
+            </span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>串接字符串</title>
+    <link rel="stylesheet" href="{% static 'css/String.css' %}">
+</head>
+<body>
+
+<div class="from">
+    <img class="bgc" src="{% static "img/4.png" %}" alt="">
+    <div class='ribbon' style="right: 50px;top: 20px;">
+        <a href='/str_one/'><span>串接字符串</span></a>
+        <a href='/str_two/'><span>去除特殊符号</span></a>
+        <a href='/str_four/'><span>验证码</span></a>
+        <a href='/str_three/'><span>查询生肖</span></a>
+    </div>
+    <div class="submit"style="height: 350px;">
+        <span class="form_title">串接字符串</span>
+        <form method='post' enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form_input">
+                <span>字符串1:</span>
+                <input class="inputs" type="text" name="first_str_one" required="required">
+            </div>
+            <div class="form_input">
+                <span>字符串2:</span>
+                <input class="inputs" type="text" name="first_str_two" required="required">
+            </div>
+            <div class="btn_submit">
+                <a>
+                    <button type="submit" class="btn">提交</button>
+                </a>
+            </div>
+            <h1>
+                <div style="text-align: center;">
+                    {{ result_one }}
+                </div>
+            </h1>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

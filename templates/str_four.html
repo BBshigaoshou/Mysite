@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>去除特殊符号</title>
+    <link rel="stylesheet" href="{% static 'css/String.css' %}">
+</head>
+<body>
+
+<div class="from">
+    <img class="bgc" src="{% static "img/4.png" %}" alt="">
+    <div class='ribbon' style="right: 50px;top: 20px;">
+        <a href='/str_one/'><span>串接字符串</span></a>
+        <a href='/str_two/'><span>去除特殊符号</span></a>
+        <a href='/str_four/'><span>验证码</span></a>
+        <a href='/str_three/'><span>查询生肖</span></a>
+    </div>
+    <div class="submit">
+        <span class="form_title" style="font-size: 30px;">验证码</span>
+        <form method='post' enctype="multipart/form-data">
+            {% csrf_token %}
+            <div style="height : 40px;padding: 0 30px;box-sizing: border-box;display: flex;margin-top: 20px;font-size: 25px;">
+                <span>随机数为：</span>
+                <a id="random_num" name="random_num"></a>
+            </div>
+            <div class="form_input">
+                <span style="font-size: 23px;width:100px" >验证码为:</span>
+                <input class="inputs" type="text" id="input_num" required="required">
+            </div>
+            <div class="btn_submit">
+                <a>
+                    <button type="button" class="btn" onclick="isReal()">提交</button>
+                </a>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+<script>
+    function isReal() {
+        var input_num = document.getElementById("input_num").value;
+        if (random_num == input_num) {
+            alert("验证码正确")
+            createRan(4)
+        } else {
+            alert("验证码错误")
+        }
+        document.getElementById("input_num").value = "";
+    }
+</script>
+
+<script>
+    var random_num = '';
+
+    function createRan(n) {
+        random_num = '';
+        for (let i = 0; i < n; i++) {
+            random_num += String(Math.floor(Math.random() * 10))
+        }
+        document.getElementById("random_num").innerHTML = random_num;
+    }
+
+    createRan(4);
+</script>
+
+
+</body>
+
+</html>

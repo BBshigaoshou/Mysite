@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+@import "workpage.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.big {
+    width: 500px;
+    height: 700px;
+    background: deepskyblue;
+    position: absolute;
+    overflow: hidden;
+    left: 774px;
+}
+
+.small {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 650px;
+    left: 225px;
+    margin-bottom: 0;
+}
+
+#zd_1 {
+    position: absolute;
+    top: 618px;
+    left: 234px;
+    display: none;
+}
+
+#zd_2 {
+    position: absolute;
+    top: 618px;
+    left: 234px;
+    display: none;
+}
+
+#zd_3 {
+    position: absolute;
+    top: 618px;
+    left: 234px;
+    display: none;
+}
+
+#zd_4 {
+    position: absolute;
+    top: 618px;
+    left: 234px;
+    display: none;
+}
+
+#zdj_1 {
+    position: absolute;
+    top: -32px;
+    left: 234px;
+    display: none;
+}
+
+#zdj_2 {
+    position: absolute;
+    top: -32px;
+    left: 234px;
+    display: none;
+}
+
+#zdj_3 {
+    position: absolute;
+    top: -32px;
+    left: 234px;
+    display: none;
+}
+
+#zdj_4 {
+    position: absolute;
+    top: -32px;
+    left: 234px;
+    display: none;
+}
+
+#zdj_5 {
+    position: absolute;
+    top: -32px;
+    left: 234px;
+    display: none;
+}
+
+#zdj_6 {
+    position: absolute;
+    top: -32px;
+    left: 234px;
+    display: none;
+}
+
+#zdj_7 {
+    position: absolute;
+    top: -32px;
+    left: 234px;
+    display: none;
+}
+
+#zdj_8 {
+    position: absolute;
+    top: -32px;
+    left: 234px;
+    display: none;
+}
+
+#start {
+    width: 140px;
+    height: 40px;
+    background: #31ff00;
+    position: absolute;
+    left: 180px;
+    top: 518px;
+    text-align: center;
+    border: 0;
+}
+
+#start span {
+    display: inline-block;
+    padding: 10px;
+
+}
+
+#score {
+    width: 200px;
+    height: 30px;
+    background: cornflowerblue;
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+
+}
+
+#A_blood {
+    width: 200px;
+    height: 35px;
+    position: relative;
+    margin-top: 40px;
+    background: #96ff7d;
+    text-align: center;
+
+}
+
+#blood {
+    width: 200px;
+    height: 30px;
+    background: red;
+    position: relative;
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+

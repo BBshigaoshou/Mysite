@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册界面</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+
+<div class="from">
+    <img class="bgc" src="{% static "img/a.png" %}" alt="">
+    <div class="submit">
+        <span class="form_title">用户注册</span>
+        <form method='post' enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form_input">
+                <span>用户名:</span>
+                <input class="inputs" type="text" name="userName" placeholder="请输入用户名"required="required" >
+            </div>
+            <div class="form_input">
+                <span>邮箱:</span>
+                <input class="inputs" type="email" name="userEmail" placeholder="请输入您的邮箱地址，如 123@qq.com"required="required" >
+            </div>
+            <div style="text-align: center;
+                color: red;">
+                {{ msg }}
+            </div>
+            <div class="form_input">
+                <span>密码:</span>
+                <input class="inputs" type="password" name="userPassword" placeholder="请输入密码"required="required" >
+            </div>
+            <div class="form_input">
+                <span>确认密码:</span>
+                <input class="inputs" type="password" name="userRePassword" placeholder="请重复输入密码"required="required" >
+            </div>
+            <div style="text-align: center;
+                color: red;">
+                {{ error_msg }}
+            </div>
+            <div class="btn_submit">
+                <a>
+                    <button type="submit" class="btn">注册</button>
+                </a>
+                <a href="/login" class="back">
+                    <button type="button" class="home_href">返回登录</button>
+                </a>
+            </div>
+
+        </form>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>

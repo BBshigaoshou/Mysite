@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户主页</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+<div class="home">
+    <div class="content">
+        <div class="stars"></div>
+        <img class="bgc" src="{% static "img/5.png" %}" width="100%" alt="">
+        <h3 class="title">欢迎来到我的个人网站</h3>
+        <h3 class="titles">今天也要加油鸭</h3>
+        <img class="icon" src="{% static "img/2.png" %}" alt="">
+        <div class='ribbon'>
+            <a href='/index/'><span>Home</span></a>
+            <a href='/game/'><span>Game</span></a>
+            <a href='/login/'><span>Login</span></a>
+        </div>
+    </div>
+    <div class="icons">
+        <div class="icons_items">
+            <a href="/str_one/">
+                <img class="icons_items_imgs" src="{% static "img/work1.png" %}" alt="">
+            </a>
+            <span>字符串作业</span>
+        </div>
+        <div class="icons_items">
+            <a href="/weather/">
+                <img class="icons_items_imgs" src="{% static "img/work2.png" %}" alt="">
+            </a>
+            <span>查询天气</span>
+        </div>
+        <div class="icons_items">
+            <a href="/webwork/">
+                <img class="icons_items_imgs" src="{% static "img/work3.png" %}" alt="">
+            </a>
+            <span>校园网登录校园网</span>
+        </div>
+        <div class="icons_items">
+            <a href="/excelwork/">
+                <img class="icons_items_imgs" src="{% static "img/work4.png" %}" alt="">
+            </a>
+            <span>导师分配系统</span>
+        </div>
+    </div>
+
+
+    <div class="introduce">
+        <div class="introduce_item">
+            <img class="introduce_item_img" src="{% static "img/7.png" %}" alt="">
+            <span class="introduce_item_title">天空还是一片浅蓝,转眼间东方出现了一道红霞,红霞慢慢地在扩大，不大一会就染红了小半边天。颜色红得可爱， 又 过了一会儿,在那个地方出现了太阳的小半边脸。</span>
+
+        </div>
+        <div class="introduce_item">
+            <span class="introduce_item_titles" style="padding-right: 100px;">当清晨的阳光洒进我们温馨的寝室，忙碌的一天又开始了，闹钟开始响起，每个人睡眼惺忪，从床上爬起，忙忙碌碌的穿梭在食堂与教室之间</span>
+            <img class="introduce_item_img" src="{% static "img/2.png" %}" alt="">
+        </div>
+        <div class="introduce_item">
+            <img class="introduce_item_img" src="{% static "img/9.png" %}" alt="">
+            <span class="introduce_item_title">温暖的阳光照耀着大地，远处的小山都金灿灿的美轮美奂，它穿梭于微隙的气息。舒倘，漫长。紫檀的香味，弥漫在春日，把天地间一切空虚盈满，阳光下，是一道纤绝的尘陌，呢喃着天真，充盈着那抹曾经深不可测的孤清而飘逸的影。</span>
+        </div>
+        <div class="introduce_item">
+            <span class="introduce_item_titles" style="padding-right: 100px;">当晚自习结束后，抬头望向天空，几颗大而亮的星星挂在夜空，仿佛是天上的人儿提着灯笼在巡视那浩瀚的太空。美丽极了，裹紧衣裳，在这优美的夜色中慢慢的走回寝室。</span>
+            <img class="introduce_item_img" src="{% static "img/8.png" %}" alt="">
+        </div>
+    </div>
+
+    </audio>
+    <img class="music_img" src="{% static "img/3.png" %}" alt="">
+</div>
+
+</body>
+
+
+</html>

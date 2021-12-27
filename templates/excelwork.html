@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户主页</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homework.css' %}">
+</head>
+
+
+<body>
+<div style="background-color: rgba(162,211,236,0.22)">
+    <div class="home">
+        <div class="introduce">
+            <div class="introduce_item">
+                <img class="introduce_item_img" style="width: 500px;height: 200px;" src="{% static "img/excel.png" %}"
+                     alt="">
+            </div>
+            <div style="align-self: center;width: 300px;height: 120px;">
+                <a href="/downExcel/"><img src="{% static "img/excel4.png" %}" alt=""></a>
+            </div>
+            <div class="introduce_item">
+                <span class="introduce_item_titles" style="font-size: 34px;padding-right: 50px;">由于xlrd新版本不支持xlxs文件，我们安装1.2版本的xlrd库，读取excel文件</span>
+                <img class="introduce_item_img" style="width: 950px;height: 650px;" src="{% static "img/excel1.png" %}"
+                     alt="">
+            </div>
+            <div class="introduce_item">
+                <img class="introduce_item_img" style="width: 537px;height: 758px;" src="{% static "img/excel2.png" %}"
+                     alt="">
+                <span class="introduce_item_titles" style="font-size: 34px;width : 550px; padding-left: 50px;">随机分配主要思路：既然学生的信息和学生所在表格的行数有关，就想到了把行数当成学生的id，把1-36这36个数随机打乱成一个随机数组，此时只需要按照老师排列顺序以及对应学生数在数组中依次取学生(例如：第一个老师需要6个学生，分配的即为随机数组中前6个随机数对应的学生)，即可实现学生分配导师。</span>
+            </div>
+            <div style="align-self: center;width: 300px;height: 120px;">
+                <a href="/webExcel/"><img src="{% static "img/web4.png" %}" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录界面</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+
+<div class="from">
+    <img class="bgc" src="{% static "img/a.png" %}" alt="">
+    <div class="submit">
+        <span class="form_title">用户登录</span>
+        <form method='post' enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form_input">
+                <span>用户名:</span>
+                <input class="inputs" type="text" name="username" placeholder="username"required="required" >
+            </div>
+            <div class="form_input">
+                <span>密码:</span>
+                <input class="inputs" type="password" name="password" placeholder="password"required="required" >
+            </div>
+            <div style="text-align: center;
+                color: red;">
+                {{ error_msg }}
+            </div>
+            <div class="btn_submit">
+                <a>
+                    <button type="submit" class="btn">登录</button>
+                </a>
+                <a href="/registe" class="back">
+                    <button type="button" class="home_href">注册</button>
+                </a>
+            </div>
+
+        </form>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+@import "style.css";
+@import "about.css";
+body{
+	background-image:url(../img/back.png) ;/*插入的背景图片的url
+	background-attachment: fixed;/*背景图片不会固定不会因页面滚动而重复*/
+	background-repeat: no-repeat;/*使图片不管任何大小都不会重复*/
+	background-size: 100%;/*改变背景图的长和宽*/
+}
